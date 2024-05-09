@@ -11,7 +11,7 @@ dotenv.config({path:"./config/config.env"});
 
 //to use the backend with the frontend
 //this will be used as a middleware
-const frontendURL = process.env.FRONTEND_URL || '*';
+const frontendURL = 'https://restaurant-website-alpha-three.vercel.app/';
 
 app.use(cors({
     origin:frontendURL,
