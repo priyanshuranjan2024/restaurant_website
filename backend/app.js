@@ -11,8 +11,10 @@ dotenv.config({path:"./config/config.env"});
 
 //to use the backend with the frontend
 //this will be used as a middleware
+const frontendURL = process.env.FRONTEND_URL || '*';
+
 app.use(cors({
-    origin:[process.env.FRONTEND_URL],
+    origin:frontendURL,
     methods:["POST"],
     credentials:true
 }));
